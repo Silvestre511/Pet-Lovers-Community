@@ -1,10 +1,12 @@
 <div id="wrapper">
-Hello World
-<br />Base URL: <?php echo base_url(); ?>
+<h2><?= $title; ?></h2><br />
 
-<img src="<?php echo base_url('assets/images/nestle.png')?>" alt="Sample Image" />
+<!-- <img src="<?php echo base_url('assets/img/paw2.png')?>" alt="Sample Image" /> -->
 
-<?php echo form_open('', array('id'=>'hello_form')); ?>
+<?php echo validation_errors(); ?>
+
+<?php echo form_open('register/index'); ?>
+<form>
 	<div class="the-form">
 		<div>
 			<label for="">First Name</label>
@@ -17,10 +19,13 @@ Hello World
 		<div>
 			<label for="">Email</label>
 			<input type="text" name="email" class="" placeholder="Enter Email"/>
-		</div>		
-		<div>
-			<input type="submit" value="Submit" />
 		</div>
+		<div>
+			<label for="">Password</label>
+			<input type="text" name="password" class="" placeholder="Enter Password"/>
+		</div>
+			<button type="submit">Submit</button>
 	</div>
-<?php echo form_close(); ?>
+</form>
+<!-- <?php echo form_close(); ?> -->
 </div>
